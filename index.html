@@ -2,47 +2,219 @@
 <html>
 <head>
 	<title>The Office Trivia</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 </head>
 <body>
 <!--Making a 10 question trivia game based on TV show The Office. It will need 10 questions each having 4 answer choices to click on. To start the game the user must click the "Start" button. Then the game will be timed with a counter, counting down. If the time hits 0:00 or is clicked done at end of questions, the game will show "All Done!" with (Correct Answers:, Incorrect Answers:, Unanswered:)-->
-	<h1>The Office Trivia Game</h1>
+	<div id="header">
+		<div class="jumbotron jumbotron-special">
+			<h1>The Office Trivia Game</h1>
+		</div>
+	</div>
+	
 	<div class="container">
-		<div id="startBtn"></div>
+		
 		<div id="counter"></div>
+
+
+		<div class="jumbotron">	
+		
+		<div id="startBtn">
+		<div id="display">60 Seconds to finish</div>
+		<br>
+		<button type="button" class="btn btn-primary">Start Game</button>
+		
+
+		</div>
+		<br><br>
+
 		<div class="questions">
 		<div id="Q1">
 			<p>What was Michael Scott's fictitious movie name?</p><!--Michael Scarn-->
-		</div>
+				<label>
+				<input type="radio" name="myRadio1" id="radio1" value="no" />Michael Scotty</label><br>
+				<label>
+				<input type="radio" name="myRadio1" id="radio2" value="yes" />Michael Scarn</label><br>
+				<label>
+				<input type="radio" name="myRadio1" id="radio3" value="no" />Mike Skull</label><br>
+				<label>
+				<input type="radio" name="myRadio1" id="radio4" value="no" />Michael Schrute</label><br>
+		</div><br>
+
 		<div id="Q2">
 			<p>What company fun event was going on when Jim kissed Pam for the first time?</p><!--Casino Night-->
-		</div>
+				<label>
+				<input type="radio" name="myRadio2" id="radio1" value="someValue" />Fun Run</label><br>
+				<label>
+				<input type="radio" name="myRadio2" id="radio2" value="someOtherValue" />Casino Night</label><br>
+				<label>
+				<input type="radio" name="myRadio2" id="radio3" value="someValue" />Christmas Party</label><br>
+				<label>
+				<input type="radio" name="myRadio2" id="radio4" value="someOtherValue" />Toby's going away party</label><br>
+		</div><br>
+
 		<div id="Q3">
 			<p>What is the name of Dwight Schrute's character he becomes on Earth Day?</p><!--Recyclops-->
-		</div>
+				<label>
+				<input type="radio" name="myRadio3" id="radio1" value="someValue" />Recyclops</label><br>
+				<label>
+				<input type="radio" name="myRadio3" id="radio2" value="someOtherValue" />Recycle Man</label><br>
+				<label>
+				<input type="radio" name="myRadio3" id="radio3" value="someValue" />Earth Boy</label><br>
+				<label>
+				<input type="radio" name="myRadio3" id="radio4" value="someOtherValue" />Battle Star Defender</label><br>
+		</div><br>
+
 		<div id="Q4">
 			<p>What College did Andy attend?</p><!--Cornell-->
-		</div>
+				<label>
+				<input type="radio" name="myRadio4" id="radio1" value="someValue" />Yale</label><br>
+				<label>
+				<input type="radio" name="myRadio4" id="radio2" value="someOtherValue" />Cornell</label><br>
+				<label>
+				<input type="radio" name="myRadio4" id="radio3" value="someValue" />Harvard </label><br>
+				<label>
+				<input type="radio" name="myRadio4" id="radio4" value="someOtherValue" />Dartmouth</label><br>
+		</div><br>
+
 		<div id="Q5">
 			<p>Who did Angela name her baby after?</p><!--Her Cat Phillip-->
-		</div>
+				<label>
+				<input type="radio" name="myRadio5" id="radio1" value="someValue" />Her Grandfather Phillip</label><br>
+				<label>
+				<input type="radio" name="myRadio5" id="radio2" value="someOtherValue" />Her Uncle Phillip</label><br>
+				<label>
+				<input type="radio" name="myRadio5" id="radio3" value="someValue" />Her Husband "The Senator"</label><br>
+				<label>
+				<input type="radio" name="myRadio5" id="radio4" value="someOtherValue" />Her Cat Phillip</label><br>
+		</div><br>
+
 		<div id="Q6">
 			<p>Who did Oscar compare himself to after Michael "outed" him?</p><!--Sir Ian McKellen-->
-		</div>
+				<label>
+				<input type="radio" name="myRadio6" id="radio1" value="someValue" />Michael Scott</label><br>
+				<label>
+				<input type="radio" name="myRadio6" id="radio2" value="someOtherValue" />Usher</label><br>
+				<label>
+				<input type="radio" name="myRadio6" id="radio3" value="someValue" />Sir Ian McKellen</label><br>
+				<label>
+				<input type="radio" name="myRadio6" id="radio4" value="someOtherValue" />Jack Black</label><br>
+		</div><br>
+
 		<div id="Q7">
 			<p>How did Meredith find out she had rabies?</p><!--Being hit my Michael's car-->
-		</div>
+				<label>
+				<input type="radio" name="myRadio7" id="radio1" value="someValue" />When she went to rehab </label><br>
+				<label>
+				<input type="radio" name="myRadio7" id="radio2" value="someOtherValue" />Being hit by Michael's car</label><br>
+				<label>
+				<input type="radio" name="myRadio7" id="radio3" value="someValue" />Getting arrested for a DUI</label><br>
+				<label>
+				<input type="radio" name="myRadio7" id="radio4" value="someOtherValue" />At the Christmas Party</label><br>
+		</div><br>
+
 		<div id="Q8">
 			<p>How did Kevin Malone get his job at Dunder Mifflin?</p><!--Michael had "a feeling about him"-->
-		</div>
+				<label>
+				<input type="radio" name="myRadio8" id="radio1" value="someValue" />Michael had "a feeling about him"</label><br>
+				<label>
+				<input type="radio" name="myRadio8" id="radio2" value="someOtherValue" />Taking a and IQ test</label><br>
+				<label>
+				<input type="radio" name="myRadio8" id="radio3" value="someValue" />At the Dunder Mifflin job fair</label><br>
+				<label>
+				<input type="radio" name="myRadio8" id="radio4" value="someOtherValue" />Eating a whole jar of candy</label><br>
+		</div><br>
+
 		<div id="Q9">
 			<p>What was Kelly Kapoor's job?</p><!--Customer Service Rep-->
-		</div>
+				<label>
+				<input type="radio" name="myRadio9" id="radio1" value="someValue" />Quality Control</label><br>
+				<label>
+				<input type="radio" name="myRadio9" id="radio2" value="someOtherValue" />Sales Person</label><br>
+				<label> 
+				<input type="radio" name="myRadio9" id="radio3" value="someValue" />Receptionist</label><br>
+				<label>
+				<input type="radio" name="myRadio9" id="radio4" value="someOtherValue" />Customer Service Rep</label><br>
+		</div><br>
+
 		<div id="Q10">
 			<p>How did Robert Dunder and Robert Mifflin meet?</p><!--A tour of Dartmouth College-->
+				<label>
+				<input type="radio" name="myRadio10" id="radio1" value="someValue" />At Chili's</label><br>
+				<label> 
+				<input type="radio" name="myRadio10" id="radio2" value="someOtherValue" />In the Army</label><br>
+				<label>
+				<input type="radio" name="myRadio10" id="radio3" value="someValue" />A tour of Dartmouth College</label><br>
+				<label>
+				<input type="radio" name="myRadio10" id="radio4" value="someOtherValue" />At a company picnic </label><br><br>
+				
+				<button type="button" class="btn btn-success" onclick="quizDone()">Done!</button>
+				
 		</div>
+		
+		</div>	
 		</div>
 		<div id="doneBtn"></div>
 	</div>
+
+	<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>	
+	<script type="text/javascript">
+
+	window.onload = function(){
+    $('.btn-primary').on('click', stopwatch.start);
+};
+
+var stopwatch = {
+    time:60,
+    reset: function(){
+        stopwatch.time = 0;
+        stopwatch.lap = 1;
+        $('#display').html('60 Seconds to finish');
+        $('#laps').html('');
+    },
+    start: function(){
+        counter = setInterval(stopwatch.count, 1000);
+    },
+  
+    count: function(){
+        stopwatch.time--;
+        var converted = stopwatch.timeConverter(stopwatch.time);
+        $('#display').html(converted);
+    },
+    timeConverter: function(t){
+        var minutes = Math.floor(t/60);
+        var seconds = t - (minutes * 60);
+        if (seconds < 10){
+            seconds = "0" + seconds;
+        }
+        if (minutes === 0){
+            minutes = "";
+        } else if (minutes < 10){
+           
+         }
+        return + seconds + ("<p>Seconds Left</p>");
+    }
+};
+
+		
+	function quizDone() {
+		 alert("Are you sure you're done?");
+		}
+	function startGame() {
+		 	}
+	function timeOut() {
+		if seconds === 0;
+		
+	}
+    
+
+	</script>
+
+
+
 
 </body>
 </html>

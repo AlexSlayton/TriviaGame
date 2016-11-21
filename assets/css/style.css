@@ -1,0 +1,25 @@
+body {
+		background-image: url("LightWood.png");
+		margin: 0;
+	}	
+
+.jumbotron-special {
+	background-color: green;
+}
+#display{
+  background: #428bca;
+  color: #ebebeb;
+  font-size: 70px;
+  text-align: center;
+}
+.jumbotron {
+	background-color: lightblue;
+}
+
+#header {
+
+}
+
+ h1{
+ 	text-align: center;
+ }
