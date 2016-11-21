@@ -164,55 +164,70 @@
 	<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>	
 	<script type="text/javascript">
 
-	window.onload = function(){
-    $('.btn-primary').on('click', stopwatch.start);
 
-};
 
-var stopwatch = {
-    time:10,
-    reset: function(){
-        stopwatch.time = 0;
-        stopwatch.lap = 1;
-        $('#display').html('60 Seconds to finish');
+    $(document).ready(function(){
+        $('.btn-primary').on('click', stopwatch.start);
+    });
 
-        
-    },
-    start: function(){
-        counter = setInterval(stopwatch.count, 1000);
-    },
-  
-    count: function(){
-        stopwatch.time--;
-        var converted = stopwatch.timeConverter(stopwatch.time);
-        $('#display').html(converted);
-    },
-    timeConverter: function(t){
-        var minutes = Math.floor(t/60);
-        var seconds = t - (minutes * 60);
-        if (seconds < 10){
-            seconds = "0" + seconds;
-        }
-        if (minutes === 0){
-            minutes = "";
-        } else if (minutes < 10){
-           
-         }
-        return + seconds + ("<p>Seconds Left</p>");
-    }
-};
+
+        var counter;
+        var stopwatch = {
+            time: 10,
+            reset: function(){
+                stopwatch.time = 0;
+                $('#display').html('60 Seconds to finish');
+            },
+            start: function(){
+                console.log("check");
+                counter = setInterval(stopwatch.count, 1000);
+            },
+            count: function(){
+                console.log(stopwatch.time);
+                stopwatch.time--;
+                var converted = stopwatch.timeConverter(stopwatch.time);
+                $('#display').html(converted);
+                if(stopwatch.time == 0){
+                    stopwatch.quizDone();
+                }
+            },
+            quizDone: function(){
+                alert("Are you sure you're done?");
+                clearInterval(counter);
+            },
+            timeConverter: function(t){
+                var minutes = Math.floor(t/60);
+                var seconds = t - (minutes * 60);
+                if (seconds < 10){
+                    seconds = "0" + seconds;
+                }
+                if (minutes === 0){
+                    minutes = "";
+                } else if (minutes < 10){
+
+                 }
+                return seconds + ("<p>Seconds Left</p>");
+            }
+        };
+
+
+    
  
-		
-	function quizDone() {
-		 alert("Are you sure you're done?");
-		 clearInterval(stopwatch.count);
-		}
 	function startGame() {
 		 	}
 	function timeOut() {
 		if (stopwatch == 0){
-			quizDone();
+			
 		}
+	function quizDone(){
+                alert("Are you sure you're done?");
+                
+            }
+			$('#radio1').click(function() {
+   if($('#radio1').is(':checked')) { alert("it's checked"); }
+});
+
+	
 		
 
 	}
